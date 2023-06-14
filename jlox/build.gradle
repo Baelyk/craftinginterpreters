@@ -1,0 +1,8 @@
+plugins {
+  id "application"
+}
+apply plugin : "java"
+
+application {
+  mainClass = "com.craftinginterpreters.lox.Lox"
+}
