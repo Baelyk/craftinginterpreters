@@ -16,4 +16,5 @@ target_sources(clox
 		src/vm.c
 		src/compiler.c
 		src/scanner.c
+		src/object.c
 )
