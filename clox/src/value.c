@@ -55,13 +55,8 @@ bool valuesEqual(Value left, Value right) {
     return true;
   case VAL_NUMBER:
     return AS_NUMBER(left) == AS_NUMBER(right);
-  case VAL_OBJ: {
-    ObjString *leftString = AS_STRING(left);
-    ObjString *rightString = AS_STRING(right);
-    return leftString->length == rightString->length &&
-           memcmp(leftString->chars, rightString->chars, leftString->length) ==
-               0;
-  }
+  case VAL_OBJ:
+    return AS_OBJ(left) == AS_OBJ(right);
   default:
     return false; // Unreachable
   }
